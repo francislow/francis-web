@@ -36,13 +36,10 @@
     padding: 10px 20px;
     font-family: "Raleway";
     font-weight: bold;
+    color: white;
+    font-size: 15px;
 
     transition: all 0.7s;
-}
-  
-.welcome-page-wrapper .read-bio-button a {
-    color: white;
-    font-size: 18px;
 }
 
 /* Hover  */
@@ -50,9 +47,6 @@
     cursor: pointer;
     background-color: var(--color-dark-grey);
     border: var(--color-dark-grey) solid 2px;
-}
-
-.welcome-page-wrapper .read-bio-button:hover a {
     color: var(--color-dark-yellow);
 }
 
@@ -89,9 +83,6 @@
         border: white solid 1px;
         border-radius: 10px;
         padding: 7px 15px;
-    }
-      
-    .welcome-page-wrapper .read-bio-button a {
         font-size: 13px;
     }
 }
