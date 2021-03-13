@@ -18,7 +18,7 @@ function ProjectItem({ projectThumbnail, projectName, projectType, projectDesc, 
     function parseProjectDevTools() {
         let result = ""
         projectDevTools.forEach((devTool, index) => {
-            index == projectDevTools.length - 1 ? result += devTool : result += devTool + ", "
+            index === projectDevTools.length - 1 ? result += devTool : result += devTool + ", "
         })
 
         return result
@@ -29,11 +29,11 @@ function ProjectItem({ projectThumbnail, projectName, projectType, projectDesc, 
             <div style={imageWrapperStyle} className="image-wrapper"></div>
             <div className="desc-wrapper">
                 <div>
-                    <p class="title">{projectName}</p>
-                    <p class="type">{projectType}</p>
+                    <p className="title">{projectName}</p>
+                    <p className="type">{projectType}</p>
                     <ProjectLabel1 iconUrl={calendar_white} labelTitle={projectTimeline} className="margin-top-25"/>
                     <ProjectLabel1 iconUrl={tech_white} labelTitle={parseProjectDevTools()} className="margin-top-5"/>
-                    <p class="desc">{projectDesc}</p>
+                    <p className="desc">{projectDesc}</p>
 
 
                     {/* Google Playstore Button */}

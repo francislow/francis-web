@@ -9,6 +9,7 @@ function About() {
     function renderAllProjectItems() {
         return projectsData.map(data => {
             return <ProjectItem
+                key={data.name}
                 projectThumbnail={data.thumbnailImageUrl}
                 projectName={data.name} 
                 projectType={data.type} 
@@ -21,7 +22,7 @@ function About() {
         })
     }
     return (
-        <div className="works-page-wrapper section">
+        <div id="works" className="works-page-wrapper section">
             <div className="works-header">
                 <SectionLabel iconUrl={myworks_nav_icon_active} titleNormal="My " titleHighlight="Works"/>
             </div>

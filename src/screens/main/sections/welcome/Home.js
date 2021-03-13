@@ -6,7 +6,7 @@ function Welcome() {
     }
 
     return (
-        <div className="welcome-page-wrapper">
+        <div id="home" className="welcome-page-wrapper">
             <p className="intro-header">Hello, I’m <span className="name-text">Francis</span></p>
             <p className="sub-intro">I love creating applications that add value to people's lives</p>
             <div onClick={scrollToBioPage} className="read-bio-button">
