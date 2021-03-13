@@ -28,8 +28,11 @@
     font-size: 20px;
 }
 
-.welcome-page-wrapper .read-bio-button {
+.welcome-page-wrapper a {
     margin-top: 50px;
+}
+
+.welcome-page-wrapper .read-bio-button {
     text-align: center;
     border: white solid 2px;
     border-radius: 15px;
