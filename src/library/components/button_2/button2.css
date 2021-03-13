@@ -1,0 +1,31 @@
+.button2_wrapper {
+    display: flex;
+    border: white solid 1px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button2_wrapper:hover {
+    border-radius: 0px;
+    border: var(--color-dark-yellow) solid 1px;
+}
+
+.button2_wrapper:hover img {
+    margin-left: 15px;
+
+}
+
+.button2_wrapper img{
+    margin-left: 10px;
+
+    transition: all 0.2s;
+}
+
+.button2_wrapper p {
+    font-size: 12px;
+    font-weight: bold;
+}

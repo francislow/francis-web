@@ -1,0 +1,98 @@
+.welcome-page-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark-yellow);
+}
+
+.welcome-page-wrapper .intro-header {
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.welcome-page-wrapper .name-text {
+    color: var(--color-dark-grey);
+    font-size: 70px;
+}
+
+.welcome-page-wrapper .sub-intro {
+    text-align: center;
+    padding: 0 40px;
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.welcome-page-wrapper .read-bio-button {
+    margin-top: 50px;
+    text-align: center;
+    border: white solid 2px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-family: "Raleway";
+    font-weight: bold;
+
+    transition: all 0.7s;
+}
+  
+.welcome-page-wrapper .read-bio-button a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Hover  */
+.welcome-page-wrapper .read-bio-button:hover {
+    cursor: pointer;
+    background-color: var(--color-dark-grey);
+    border: var(--color-dark-grey) solid 2px;
+}
+
+.welcome-page-wrapper .read-bio-button:hover a {
+    color: var(--color-dark-yellow);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .welcome-page-wrapper .intro-header {
+        font-size: 45px;
+    }
+
+    .welcome-page-wrapper .name-text {
+        font-size: 60px;
+    }
+    
+    .welcome-page-wrapper .sub-intro {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .welcome-page-wrapper .intro-header {
+        font-size: 35px;
+    }
+
+    .welcome-page-wrapper .name-text {
+        font-size: 48px;
+    }
+    
+    .welcome-page-wrapper .sub-intro {
+        font-size: 14px;
+    }
+
+    .welcome-page-wrapper .read-bio-button {
+        margin-top: 30px;
+        border: white solid 1px;
+        border-radius: 10px;
+        padding: 7px 15px;
+    }
+      
+    .welcome-page-wrapper .read-bio-button a {
+        font-size: 13px;
+    }
+}

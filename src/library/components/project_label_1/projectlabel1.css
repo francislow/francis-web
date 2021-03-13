@@ -1,0 +1,15 @@
+.project-label-1 {
+    display: flex;
+}
+
+.project-label-1 img {
+    width: 14px;
+    height: fit-content;
+    margin-right: 10px;
+}
+
+.project-label-1 p {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+}

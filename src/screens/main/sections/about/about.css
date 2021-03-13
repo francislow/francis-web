@@ -1,0 +1,120 @@
+.about-page-wrapper {
+    background-color: var(--color-yellow);
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resume-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: rgb(243, 243, 243) solid 2px;
+    color: var(--color-dark-grey);    
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: all 0.2s;
+
+}
+
+.resume-button:hover {
+    border: var(--color-dark-grey) solid 2px;
+}
+
+.about-content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-content > img{
+    height: 230px;
+    width: 230px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: white;
+    margin-right: 100px;
+}
+
+.about-social-links {
+    margin-top: 70px;
+}
+
+.about-social-links img {
+    margin-right: 60px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+}
+
+.about-social-links img:hover {
+    opacity: 0.4;
+    transform: scale(1.1);
+    transform: rotate(7deg);
+}
+
+
+@media only screen and (max-width: 800px) {
+    .about-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .about-content p {
+        margin-top: 30px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .about-social-links {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-social-links img {
+        margin: 0 20px;
+    }
+
+
+    .about-header {
+        flex-direction: column;
+    }
+
+    .resume-button {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-content > img{
+        display: none;
+    }
+
+    .about-content p {
+        margin-top: 0px;
+        font-size: 14px;
+    }
+
+    .about-social-links img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .about-social-links img {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+    }
+}
