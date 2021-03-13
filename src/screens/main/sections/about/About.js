@@ -28,8 +28,11 @@ function About() {
                 <div>
                     {/* Bio Text */}
                     <p>
-                        I am a final year student at National University of Singapore, passionate about web 
-                        and mobile application development.<br/><br/>
+                        I am a final year student at{" "}
+                        <a style={{color: 'white', textDecoration: "underline"}} target="_blank" rel="noopener noreferrer" href="http://www.nus.edu.sg/">
+                            National University of Singapore
+                        </a>
+                        , passionate about web and mobile application development.<br/><br/>
                         As an aspiring full-stack developer, it is the thrill of creating something impactful 
                         that gives me a sense of fulfillment. It gives me much satisfaction seeing a product 
                         take shape from merely an idea to its final form.<br/><br/>
