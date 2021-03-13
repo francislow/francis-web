@@ -6,6 +6,7 @@ import insta_icon from "../../../../library/assets/images/insta_icon.png";
 import github_icon from "../../../../library/assets/images/github_icon.png";
 import mail_icon from "../../../../library/assets/images/mail_icon.png";
 import linkedin_icon from "../../../../library/assets/images/linkedin_icon.png";
+import document_icon from "../../../../library/assets/images/document_icon_black.png";
 import SectionLabel from "../../../../library/components/section_label/SectionLabel"
 import resumeUrl from "../../../../library/assets/documents/Francis_Resume_8_3_2021.pdf";
 
@@ -21,7 +22,8 @@ function About() {
                 <SectionLabel iconUrl={about_nav_icon_active} titleNormal="My " titleHighlight="Bio"/>
                 {/* Resume Button */}
                 <div onClick={navToResumePage} className="resume-button">
-                    View My Resume
+                    <img src={document_icon} alt={document_icon} width="15px"/>
+                    <p>View My Resume</p>
                 </div>
             </div>
             <div className="about-content">

@@ -21,7 +21,10 @@
     font-weight: bold;
 
     transition: all 0.2s;
+}
 
+.resume-button img {
+    margin-right: 7px;
 }
 
 .resume-button:hover {
