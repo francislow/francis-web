@@ -6,7 +6,8 @@ function NavLink({ activeImageUrl, inactiveImageUrl, title, scrollToId, isSelect
 
     const titleStyle = {
         // getComputedStyle(document.documentElement).getPropertyValue('--color-yellow') getting color from css variable
-        color: `${isHovered || isSelected ? "white" : colors.yellow}`,
+        color: `${isSelected ? "white" : colors.yellow}`,
+        textDecoration: `${isHovered ? "underline" : 'initial'}`,
     }
 
     function onMouseOver() {
@@ -22,7 +23,7 @@ function NavLink({ activeImageUrl, inactiveImageUrl, title, scrollToId, isSelect
         <div className="action-bar-link" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
             <a href={scrollToId}>
                 {/* Navigation Icon */}
-                {isHovered || isSelected ?
+                {isSelected ?
                     <img src={activeImageUrl} alt={activeImageUrl} height="16px"/> : 
                     <img src={inactiveImageUrl} alt={inactiveImageUrl} height="16px"/>
                 }
