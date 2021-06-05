@@ -8,7 +8,7 @@ import {
   useLocation
 } from "react-router-dom";
 import { BsCalendar } from 'react-icons/bs';
-import { IoExtensionPuzzleOutline } from 'react-icons/io5';
+import { IoExtensionPuzzleOutline, IoLogoGooglePlaystore } from 'react-icons/io5';
 
 import './rightpanel.css'
 import projects from '../../library/assets/catalogue/projectsData';
@@ -24,7 +24,7 @@ export default function RightPanel({setCurrentProjectId}) {
     setCurrentProjectId(projectId)
   }, [])
 
-  let { name, images, timeline, type, desc, devTools } = projects[projectId]
+  let { name, images, timeline, type, desc, devTools, playstoreUrl, appstoreUrl, weburl } = projects[projectId]
 
   let imageStyle = {
     filter: `brightness(95%)`,
@@ -60,7 +60,12 @@ export default function RightPanel({setCurrentProjectId}) {
       {/* Type */}
       <div class="top_detail margin-top-7 font-14">
         <IoExtensionPuzzleOutline />
-        <p className="margin-left-10">{type}</p>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+          <p className="margin-left-10">{type}</p>
+          {playstoreUrl === "" ? <></> : <a target="_blank" href={playstoreUrl} className="font-12 font-blue margin-left-10 margin-top-7">Download on Google Playstore</a> }
+          {appstoreUrl === "" ? <></> : <a target="_blank" href={appstoreUrl} className="font-12 font-blue margin-left-10 margin-top-7">Download on Apple Appstore</a> }
+          {weburl === "" ? <></> : <a target="_blank" href={weburl} className="font-12 font-blue margin-left-10 margin-top-7">Visit Website</a> }
+        </div>
       </div>
 
       {/* Description */}

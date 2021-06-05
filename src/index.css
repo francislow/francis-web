@@ -24,6 +24,7 @@ html {
   --color-dark-yellow: #FFC806;
   --color-dark-grey: #353535;
   --color-white: #ffffff;
+  --color-blue: #0094FF;
 }
 
 .margin-top-5 {
@@ -88,6 +89,10 @@ html {
 
 .font-white {
   color: white;
+}
+
+.font-blue {
+  color: var(--color-blue);
 }
 
 .bold {
