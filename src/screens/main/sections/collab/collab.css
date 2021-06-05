@@ -21,21 +21,21 @@
 }
 
 .collab-wrapper a {
-    background-color: var(--color-yellow);
     padding: 13px 20px;
     border-radius: 5px;
     font-size: 18px;
-    color: white;
     font-weight: bold;
-    border: 2px solid var(--color-dark-grey);
+    background-color: var(--color-dark-grey);
+    color: var(--color-yellow);
+    border: 2px solid var(--color-yellow);
 
     transition: all 0.3s ease-in;
 }
 
 .collab-wrapper a:hover {
-    background-color: var(--color-dark-grey);
-    color: var(--color-yellow);
-    border: 2px solid var(--color-yellow);
+    border: 2px solid var(--color-dark-grey);
+    background-color: var(--color-yellow);
+    color: white;
 }
 
 .collab-wrapper .collab_icon {
