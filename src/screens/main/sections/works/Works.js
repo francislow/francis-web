@@ -16,7 +16,7 @@ function About() {
                         projectId={key}
                         isImageFirst={index % 2 === 0 ? true : false}
                     />
-                    {index !== Object.keys(projects).length - 1 ? <div style={{border: '1px solid #F5F5F5', margin: '70px 0'}}></div> : <></>}
+                    {index !== Object.keys(projects).length - 1 ? <div style={{border: '1px solid #f0f0f0', margin: '70px 0'}}></div> : <></>}
                 </>
             )
 
