@@ -62,8 +62,8 @@ export default function RightPanel({setCurrentProjectId}) {
         <IoExtensionPuzzleOutline />
         <div style={{display: 'flex', flexDirection: 'column'}}>
           <p className="margin-left-10">{type}</p>
-          {playstoreUrl === "" ? <></> : <a target="_blank" href={playstoreUrl} className="font-12 font-blue margin-left-10 margin-top-7">Download on Google Playstore</a> }
-          {appstoreUrl === "" ? <></> : <a target="_blank" href={appstoreUrl} className="font-12 font-blue margin-left-10 margin-top-7">Download on Apple Appstore</a> }
+          {playstoreUrl === "" ? <></> : <a target="_blank" href={playstoreUrl} className="font-12 font-blue margin-left-10 margin-top-7">Get it on Google Playstore</a> }
+          {appstoreUrl === "" ? <></> : <a target="_blank" href={appstoreUrl} className="font-12 font-blue margin-left-10 margin-top-7">Get it on Apple Appstore</a> }
           {weburl === "" ? <></> : <a target="_blank" href={weburl} className="font-12 font-blue margin-left-10 margin-top-7">Visit Website</a> }
         </div>
       </div>

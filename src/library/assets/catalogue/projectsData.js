@@ -49,7 +49,7 @@ const projects = {
         type: "Web App",
         timeline: "Feb 2020",
         desc: "A web app that allows user to mass send and track responses of survey emails. User logs in using Google OAuth, and pay via Stripe API. This project was built as part of a full stack web development course by Stephan Grider.",
-        devTools: ["React", "Redux", "MongoDB", "Express", "OAuth", "Stripe", "Heroku"],
+        devTools: ["ReactJS", "Redux", "MongoDB", "Express", "OAuth", "Stripe", "Heroku"],
         playstoreUrl: "",
         appstoreUrl: "",
         weburl: "https://murmuring-thicket-55187.herokuapp.com",
