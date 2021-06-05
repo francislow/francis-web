@@ -4,7 +4,7 @@ import {
   } from "react-router-dom";
 
 import './content_actionbar.css'
-import { HiChevronLeft } from 'react-icons/hi';
+import { IoArrowBackOutline } from 'react-icons/io5';
 
 function ContentActionBar() {
     return (
@@ -13,11 +13,11 @@ function ContentActionBar() {
                 <Link to={`/main`}>
                     {/* Navigation Icon */}
                     <p style={{color: 'white', display: 'flex', alignItems: 'center', fontSize: '20px'}}>
-                        <HiChevronLeft />
+                        <IoArrowBackOutline />
                     </p>
 
                     {/* Navigation Title */}
-                    <p style={{color: "white", marginLeft: '8px'}} >Main</p>
+                    <p style={{color: "white", marginLeft: '8px'}} >Main Page</p>
                 </Link>
             </div>
         </div>
