@@ -1,0 +1,51 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section-header > p {
+    color: black;
+    font-family: Roboto, "Raleway";
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.section-header a {
+    color: var(--color-dark-yellow);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.header-divider {
+    border: 3px solid black;
+    width: 120px;
+}
+
+.section-header .children-wrapper {
+    text-align: center;
+    width: 60%;
+    color: black;
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-header > p {
+        font-size: 35px;
+    }
+
+    .section-header .children-wrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .section-header > p {
+        font-size: 25px;
+    }
+
+    .section-header .children-wrapper {
+        width: 90%;
+    }
+}

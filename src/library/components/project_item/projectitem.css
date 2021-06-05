@@ -1,62 +1,105 @@
 .project-item {
-    background-color: var(--color-dark-grey);
-    border-radius: 10px;
     display: flex;
-    flex-direction: column;
 }
 
-.project-item .image-wrapper {
+.project-item img {
+    width: 400px;
     height: 200px;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
-    background-size:cover;
-    background-position: center;
-    overflow: hidden;
+    border-radius: 10px;
 }
 
-.project-item .desc-wrapper {
-    padding: 30px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+.project-item .spacing {
+    width: 80px;
+    height: 30px;
 }
 
-.project-item .title {
+.summary-wrapper .title {
     font-size: 23px;
     font-weight: bold;
+    color: black;
 }
 
-.project-item .type {
-    font-size: 10px;
-    margin-top: 5px;
+.summary-wrapper .type {
+    color: rgb(112, 112, 112);
+    font-size: 11px;
     font-style: italic;
-    color: var(--color-dark-yellow);
+    margin-top: 3px;
 }
 
-.project-item .desc {
+.summary-wrapper .desc {
+    color: black;
+    font-size: 15px;
+    margin-top: 16px;
+}
+
+.summary-wrapper .skills_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.view_more_btn {
+    display: flex;
+    align-items: center;
+
     font-size: 12px;
-    margin-top: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+    width: fit-content;
+
+    transition: all 0.2s;
 }
 
-@media only screen and (max-width: 800px) {
+.view_more_btn p {
+    margin-right: 5px;
+    transition: all 0.2s;
 }
 
-@media only screen and (max-width: 600px) {
-    .project-item .image-wrapper {
+.view_more_btn,
+.view_more_btn p {
+    color: rgb(121, 121, 121);
+}
+
+.view_more_btn:hover,
+.view_more_btn:hover p {
+    color: black;
+}
+
+.view_more_btn:hover p {
+    margin-right: 10px;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+    .project-item img {
+        width: 300px;
         height: 150px;
     }
 }
-
-@media only screen and (max-width: 400px) {
-    .project-item .image-wrapper {
-        height: 120px;
+  
+@media only screen and (max-width: 800px) {
+    .project-item {
+        display: block;
+        text-align: center;
     }
-}
 
-@media only screen and (max-width: 250px) {
-    .project-item .image-wrapper {
-        height: 100px;
+    .summary-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        order: 2;
+    }
+
+    .summary-wrapper .skills_wrapper {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-item img {
+        order: 0;
     }
 }

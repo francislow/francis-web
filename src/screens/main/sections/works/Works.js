@@ -1,31 +1,32 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import './works.css'
-import myworks_nav_icon_active from "../../../../library/assets/images/myworks_nav_active.png";
-import SectionLabel from "../../../../library/components/section_label/SectionLabel"
-import projectsData from '../../../../library/assets/catalogue/projectsData';
+import SectionHeader from "../../../../library/components/section_label/SectionHeader"
+import projects from '../../../../library/assets/catalogue/projectsData';
 import ProjectItem from "../../../../library/components/project_item/ProjectItem"
 
 function About() {
     function renderAllProjectItems() {
-        return projectsData.map(data => {
-            return <ProjectItem
-                key={data.name}
-                projectThumbnail={data.thumbnailImageUrl}
-                projectName={data.name} 
-                projectType={data.type} 
-                projectDesc={data.desc} 
-                projectTimeline={data.timeline} 
-                projectDevTools={data.devTools} 
-                playstoreUrl={data.playstoreUrl} 
-                appstoreUrl={data.appstoreUrl}
-            />
-        })
+        return Object.keys(projects).map(function(key, index) {
+            return (
+                <>
+                    <ProjectItem
+                        key={index}
+                        projectId={key}
+                        isImageFirst={index % 2 === 0 ? true : false}
+                    />
+                    {index !== Object.keys(projects).length - 1 ? <div style={{border: '1px solid #F5F5F5', margin: '70px 0'}}></div> : <></>}
+                </>
+            )
+
+          });
     }
     return (
         <div id="works" className="works-page-wrapper section">
-            <div className="works-header">
-                <SectionLabel iconUrl={myworks_nav_icon_active} titleNormal="My " titleHighlight="Works"/>
-            </div>
+            <SectionHeader title="MY WORKS">
+                <p>Notable projects that I worked on during my free time and while in NUS. Check out a more comprehensive project listing <Link to="/main/content">here.</Link></p>
+            </SectionHeader>
             <div className="project-wrapper">
                 {renderAllProjectItems()}
             </div>

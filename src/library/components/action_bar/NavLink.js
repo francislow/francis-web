@@ -1,35 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import colors from "../../assets/colors"
 
-function NavLink({ activeImageUrl, inactiveImageUrl, title, scrollToId, isSelected }) {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const titleStyle = {
-        // getComputedStyle(document.documentElement).getPropertyValue('--color-yellow') getting color from css variable
-        color: `${isSelected ? "white" : colors.yellow}`,
-        textDecoration: `${isHovered ? "underline" : 'initial'}`,
-    }
-
-    function onMouseOver() {
-        setIsHovered(true)
-    }
-
-    function onMouseOut() {
-        setIsHovered(false)
-    }
-
-
+function NavLink({ isActive, icon, title, scrollToId }) {
     return (
-        <div className="action-bar-link" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+        <div className="action-bar-link">
             <a href={scrollToId}>
                 {/* Navigation Icon */}
-                {isSelected ?
-                    <img src={activeImageUrl} alt={activeImageUrl} height="16px"/> : 
-                    <img src={inactiveImageUrl} alt={inactiveImageUrl} height="16px"/>
-                }
+                <p style={{color: isActive ? colors.yellow : 'white', display: 'flex', alignItems: 'center', transition: 'all 0.4s'}}>
+                    {icon}
+                </p>
 
                 {/* Navigation Title */}
-                <p style={titleStyle} >{title}</p>
+                <p style={{color: `${isActive ? colors.yellow : "white"}`, transition: 'all 0.4s', marginLeft: '8px'}} >{title}</p>
             </a>
         </div>
     )

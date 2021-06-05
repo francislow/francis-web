@@ -1,65 +1,85 @@
 import React from 'react'
 import './about.css'
-import about_nav_icon_active from "../../../../library/assets/images/about_nav_active.png";
 import francis_pic from "../../../../library/assets/images/francis_pic.png";
-import insta_icon from "../../../../library/assets/images/insta_icon.png";
-import github_icon from "../../../../library/assets/images/github_icon.png";
-import mail_icon from "../../../../library/assets/images/mail_icon.png";
-import linkedin_icon from "../../../../library/assets/images/linkedin_icon.png";
-import document_icon from "../../../../library/assets/images/document_icon_black.png";
-import SectionLabel from "../../../../library/components/section_label/SectionLabel"
+import { AiFillGithub, AiOutlineInstagram } from 'react-icons/ai';
+import { FiMail } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
+import SectionHeader from "../../../../library/components/section_label/SectionHeader"
 import resumeUrl from "../../../../library/assets/documents/Francis_Resume_8_3_2021.pdf";
+import SkillsThumbnail from '../../../../library/components/skills_thumbnail/SkillsThumbnail';
 
 function About() {
-    function navToResumePage() {
+    function openResume() {
         window.open(resumeUrl);
     }
 
     return (
         <div id="about" className="about-page-wrapper section">
-            <div className="about-header">
-                {/* Section Label */}
-                <SectionLabel iconUrl={about_nav_icon_active} titleNormal="My " titleHighlight="Bio"/>
-                {/* Resume Button */}
-                <div onClick={navToResumePage} className="resume-button">
-                    <img src={document_icon} alt={document_icon} width="15px"/>
-                    <p>View My Resume</p>
+            <SectionHeader title="ABOUT ME">
+                <p>Check out my resume <a onClick={openResume}>here.</a></p>
+                
+                {/* Social Links */}
+                <div className="social-links">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/friendcislol/">
+                        <AiOutlineInstagram />
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/francislow/">
+                        <AiFillGithub />
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/francis-low-bb1b4079/">
+                        <FaLinkedinIn />
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="mailto:francislow_6@hotmail.com">
+                        <FiMail />
+                    </a>
                 </div>
-            </div>
-            <div className="about-content">
-                <div>
-                    {/* Bio Text */}
-                    <p>
-                        I am a final year student at{" "}
-                        <a style={{color: 'white', textDecoration: "underline"}} target="_blank" rel="noopener noreferrer" href="http://www.nus.edu.sg/">
-                            National University of Singapore
-                        </a>
-                        , passionate about web and mobile application development.<br/><br/>
-                        As an aspiring full-stack developer, it is the thrill of creating something impactful 
-                        that gives me a sense of fulfillment. It gives me much satisfaction seeing a product 
-                        take shape from merely an idea to its final form.<br/><br/>
-                        Also, I firmly believe there are three key elements to excel in any work we do; a clear 
-                        sense of direction, good execution and facing obstacles with grit.
-                    </p>
-                    {/* Social Links */}
-                    <div className="about-social-links">
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/friendcislol/">
-                            <img src={insta_icon} alt='insta_icon' />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/francislow/">
-                            <img src={github_icon} alt='github_icon' />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/francis-low-bb1b4079/">
-                            <img src={linkedin_icon} alt='linkedin_icon' />
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="mailto:francislow_6@hotmail.com">
-                            <img src={mail_icon} alt='linkedin_icon' />
-                        </a>
+            </SectionHeader>
+            <div className="about-content-wrapper">
+                {/* General Text */}
+                <p>
+                    I graduated from{" "}
+                    <a className="link-yellow" target="_blank" rel="noopener noreferrer" href="https://www.nus.edu.sg/">
+                        National University of Singapore
+                    </a>{" "}
+                    in 2021. From this coming June, I will be working at{" "}
+                    <a className="link-yellow" target="_blank" rel="noopener noreferrer" href="https://www.ufinity.com/">
+                        Ufinity
+                    </a>{" "}
+                    in Singapore as a fullstack developer.
+                </p>
+
+                <div className="core">
+                    {/* This actual image has rounded corners */}
+                    <img src={francis_pic} alt='francis_pic'/>
+
+                    <div className="details">
+                        <p className="title">Why I love app development</p>
+                        <p className="desc">
+                            Its fun to see an idea take shape into something big and exciting and satisfying to build a product that can benefit the wider community.
+                        </p>
+
+                        <p className="title margin-top-35">Frameworks that I use frequently</p>
+                        <div className="thumbnails_wrapper">
+                            <SkillsThumbnail name="VueJS" additionalClasses="margin-right-10 margin-top-5"/>
+                            <SkillsThumbnail name="ReactJS" additionalClasses="margin-right-10 margin-top-5"/>
+                            <SkillsThumbnail name="React Native" additionalClasses="margin-right-10 margin-top-5"/>
+                            <SkillsThumbnail name="NativeScript" additionalClasses="margin-right-10 margin-top-5"/>
+                            <SkillsThumbnail name="ExpressJS" additionalClasses="margin-top-5"/>
+                        </div>
+
+                        <p className="title margin-top-35">Stay updated!</p>
+                        <p className="desc">
+                            I will be updating this site as I go about my coding adventure (i.e. career progression and side projects). {/* Feel free to subscribe{" "}
+                            <a style={{backgroundColor: 'cyan'}} className="link-yellow" target="_blank" rel="noopener noreferrer" href="#">
+                                    here 
+                            </a>{" "}
+                            to stay updated! */}
+                        </p>
                     </div>
+
                 </div>
 
-                {/* This actual image has rounded corners */}
-                <img src={francis_pic} alt='francis_pic'/>
+
             </div>
         </div>
     )

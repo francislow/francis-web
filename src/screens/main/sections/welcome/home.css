@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-dark-yellow);
+    background-color: var(--color-yellow);
 }
 
 .welcome-page-wrapper .intro-header {
@@ -37,12 +37,11 @@
     border: white solid 2px;
     border-radius: 15px;
     padding: 10px 20px;
-    font-family: "Raleway";
     font-weight: bold;
     color: white;
     font-size: 15px;
 
-    transition: all 0.7s;
+    transition: all 0.3s;
 }
 
 /* Hover  */

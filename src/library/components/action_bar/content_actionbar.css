@@ -1,0 +1,21 @@
+.content-action-bar-wrapper {
+    position: fixed;
+    display: flex;
+    background-color: var(--color-dark-grey);
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 999;
+}
+
+.back-button a {
+    display: flex;
+    align-items: center;
+    margin-right: 35px;
+    padding: 10px 0;
+}
+
+.back-button p {
+    font-family: Roboto, "Raleway";
+    font-weight: 400;
+    font-size: 16px;
+}

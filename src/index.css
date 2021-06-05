@@ -1,8 +1,8 @@
 /* Global Styling and Imports */
 
 /* Raleway font */
-/* @import url("https://fonts.googleapis.com/css?family=Raleway:400,600,800i&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -12,6 +12,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -25,14 +26,13 @@ html {
   --color-white: #ffffff;
 }
 
-.section {
-  padding: 80px 10%;
-}
-
 .margin-top-5 {
   margin-top: 5px;
 }
 
+.margin-top-7 {
+  margin-top: 7px;
+}
 
 .margin-top-15 {
   margin-top: 15px;
@@ -48,4 +48,94 @@ html {
 
 .margin-top-40 {
   margin-top: 40px;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.margin-bottom-7 {
+  margin-bottom: 7px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.margin-bottom-35 {
+  margin-bottom: 35px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.font-white {
+  color: white;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-22 {
+  font-size: 22px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-26 {
+  font-size: 26px;
+}
+
+.font-28 {
+  font-size: 28px;
+}
+
+.section {
+  padding: 80px 15vw 150px 15vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .section {
+    padding: 80px 10vw 150px 10vw;
+  }
 }

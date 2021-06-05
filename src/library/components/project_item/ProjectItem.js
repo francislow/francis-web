@@ -1,48 +1,44 @@
 import React from 'react'
 import './projectitem.css'
-import android_logo from "../../assets/images/android_logo.png";
-import ios_logo from "../../assets/images/ios_logo.png";
-import tech_white from "../../assets/images/tech_white.png";
-import calendar_white from "../../assets/images/calendar_white.png";
+import { Link } from "react-router-dom";
 
-import nav_right_white from "../../assets/images/nav_right_white.png";
-import Button1 from '../button_1/Button1'
-import Button2 from '../button_2/Button2'
-import ProjectLabel1 from '../project_label_1/ProjectLabel1'
+import projects from '../../../library/assets/catalogue/projectsData';
+import { FaArrowRight } from 'react-icons/fa';
+import SkillsThumbnail from '../skills_thumbnail/SkillsThumbnail';
 
-function ProjectItem({ projectThumbnail, projectName, projectType, projectDesc, projectDevTools, playstoreUrl, appstoreUrl, projectTimeline }) {
-    const imageWrapperStyle = {
-        backgroundImage: `url(${projectThumbnail})`
-    }
+function ProjectItem({ isImageFirst, projectId }) {
+    let {name, type, desc, devTools, images} = projects[projectId]
 
-    function parseProjectDevTools() {
-        let result = ""
-        projectDevTools.forEach((devTool, index) => {
-            index === projectDevTools.length - 1 ? result += devTool : result += devTool + ", "
+    function renderSkills() {
+        return devTools.map(devTool => {
+            return <SkillsThumbnail additionalClasses="margin-right-10 margin-top-5" name={devTool}/>
         })
-
-        return result
     }
 
     return (
         <div className="project-item">
-            <div style={imageWrapperStyle} className="image-wrapper"></div>
-            <div className="desc-wrapper">
-                <div>
-                    <p className="title">{projectName}</p>
-                    <p className="type">{projectType}</p>
-                    <ProjectLabel1 iconUrl={calendar_white} labelTitle={projectTimeline} className="margin-top-25"/>
-                    <ProjectLabel1 iconUrl={tech_white} labelTitle={parseProjectDevTools()} className="margin-top-5"/>
-                    <p className="desc">{projectDesc}</p>
+            <img style={{order: isImageFirst ? 0 : 2}} src={images[0]}></img>
+            <div style={{order: 1}} className="spacing"></div>
+            <div style={{order: isImageFirst ? 2 : 0}} className="summary-wrapper">
+                <p className="title">{name}</p>
+                <p className="type">{type}</p>
+                <p className="desc">{desc}</p>
 
-
-                    {/* Google Playstore Button */}
-                    {/* {playstoreUrl ? <Button1 className="margin-top-40" imageUrl={android_logo} buttonTitle="Download From Play Store"/> : <></>} */}
-                    {/* Apple AppStore Button */}
-                    {/* {appstoreUrl ? <Button1 className="margin-top-15" imageUrl={ios_logo} buttonTitle="Download From App Store"/> : <></>} */}
+                {/* Skills */}
+                <div className="skills_wrapper">
+                    {renderSkills()}
                 </div>
-                <Button2 className="margin-top-40" imageUrl={nav_right_white} buttonTitle="View More"/>
-            
+
+                <Link to={`/main/content/projects/${projectId}`}>
+                    <div class="view_more_btn">
+                        <p>
+                            View More
+                        </p>
+                        
+                        <FaArrowRight />
+                    </div>
+                </Link>
+
             </div>
         </div>
     )

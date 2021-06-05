@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './screens/main/App';
+import Start from './Start';
 
-ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('root'));
+ReactDOM.render(<React.StrictMode><Start /></React.StrictMode>, document.getElementById('root'));

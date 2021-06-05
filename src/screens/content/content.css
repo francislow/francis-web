@@ -1,0 +1,24 @@
+.fade-enter,
+.fade-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s ease opacity;
+}
+.fade-enter,
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+}
+
+.content_wrapper {
+  display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+  .content_wrapper {
+    flex-direction: column;
+  }
+}

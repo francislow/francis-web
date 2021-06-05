@@ -7,8 +7,9 @@
 }
 
 .footer-deco-line {
-    width: 40px;
-    border-top: white solid 2px;
+    width: 60px;
+    border-top: white solid 3px;
+    margin-top: 25px;
 }
 
 .footer_links {
@@ -18,36 +19,69 @@
     margin-top: 35px;
 }
 
-.footer_links img {
-    border-radius: 4px;
-    padding: 12px;
+.footer_links a {
+    border-radius: 99px;
+    padding: 10px;
+    font-size: 25px;
+    color: black;
     background-color: white;
-    width: 40px;
-    height: 40px;
-    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
     cursor: pointer;
 
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
-.footer_links img:hover {
+.footer_links a:hover {
     background-color: rgb(202, 202, 202);
 }
 
+.copyright_wrapper {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-top: 35px;
+    padding-bottom: 40px;
+    font-size: 11px;
+}
+
+.copyright_wrapper p {
+    margin-left: 6px;
+}
+
+.scroll_to_top_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--color-yellow);
+    font-size: 30px;
+    color: black;
+
+    margin-bottom: 20px;
+
+    position: relative;
+    top: -25px;
+
+    transition: all 0.2s;
+}
+
+.scroll_to_top_btn:hover {
+    background-color: rgb(219, 219, 219);
+}
+
 @media only screen and (max-width: 1000px) {
-    .footer_links img {
-        padding: 10px;
-        width: 30px;
-        height: 30px;
-        margin: 0 20px;
+    .footer_links a {
+        font-size: 25px;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .footer_links img {
-        padding: 5px;
-        width: 20px;
-        height: 20px;
-        margin: 0 10px;
+    .footer_links a {
+        font-size: 20px;
     }
 }

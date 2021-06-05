@@ -1,0 +1,25 @@
+.collab-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-yellow);
+    padding: 50px 0;
+
+    color: black;
+    font-size: 45px;
+}
+
+.collab-wrapper p {
+    font-size: 16px;
+    color: black;
+    width: 90%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.collab-wrapper a {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}

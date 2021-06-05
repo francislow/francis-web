@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './actionbar.css'
-import home_nav_icon_active from "../../assets/images/home_nav_active.png";
-import home_nav_icon_inactive from "../../assets/images/home_nav_inactive.png";
-import about_nav_icon_active from "../../assets/images/about_nav_active.png";
-import about_nav_icon_inactive from "../../assets/images/about_nav_inactive.png";
-import myworks_nav_icon_active from "../../assets/images/myworks_nav_active.png";
-import myworks_nav_icon_inactive from "../../assets/images/myworks_nav_inactive.png";
-import connect_nav_icon_inactive from "../../assets/images/connect_nav_inactive.png";
-import connect_nav_icon_active from "../../assets/images/connect_nav_active.png";
-import navbar_stack_yellow from "../../assets/images/navbar_stack_yellow.png";
+import { BiHomeAlt, BiNetworkChart, BiWorld } from 'react-icons/bi';
+import { AiOutlineUser } from 'react-icons/ai';
+import { HiOutlineMenu } from 'react-icons/hi';
 
 
 import NavLink from "./NavLink"
@@ -20,6 +14,8 @@ function ActionBar() {
     useEffect(() => {
         function trackScrolling() {
             const homePageRef = document.getElementById('home');
+            if (homePageRef == null) return
+
             if (homePageRef.getBoundingClientRect().bottom <= window.innerHeight + homePageRef.clientHeight * (4/5)) {
                 setActiveSectionIndex(0)
             }
@@ -49,23 +45,26 @@ function ActionBar() {
         <>
             {/* Mobile */}
             <div className="action-bar-wrapper-mobile">
-                <img src={navbar_stack_yellow} alt={navbar_stack_yellow} onClick={() => setIsOpened(true)} height="30px" />
+                <div className="menu" onClick={() => setIsOpened(!isOpened)}>
+                    <HiOutlineMenu />
+                </div>
                 <div class={isOpened ? "appear" : "disappear"}>
-                    <img src={navbar_stack_yellow} alt={navbar_stack_yellow} onClick={() => setIsOpened(false)} height="30px" />
-
-                    <NavLink isSelected={activeSectionIndex === 0} inactiveImageUrl={home_nav_icon_inactive} activeImageUrl={home_nav_icon_active} title="Home" scrollToId="#home" />
-                    <NavLink isSelected={activeSectionIndex === 1} inactiveImageUrl={about_nav_icon_inactive} activeImageUrl={about_nav_icon_active} title="About" scrollToId="#about"/>
-                    <NavLink isSelected={activeSectionIndex === 2} inactiveImageUrl={myworks_nav_icon_inactive} activeImageUrl={myworks_nav_icon_active} title="My Works" scrollToId="#works"/>
-                    <NavLink isSelected={activeSectionIndex === 3} inactiveImageUrl={connect_nav_icon_inactive} activeImageUrl={connect_nav_icon_active} title="Let's Connect" scrollToId="#footer" />
+                    <div className="menu" onClick={() => setIsOpened(!isOpened)}>
+                        <HiOutlineMenu />
+                    </div>
+                    <NavLink isActive={activeSectionIndex === 0} icon={<BiHomeAlt />} title="Home" scrollToId="#home" />
+                    <NavLink isActive={activeSectionIndex === 1} icon={<AiOutlineUser />} title="About" scrollToId="#about" />
+                    <NavLink isActive={activeSectionIndex === 2} icon={<BiNetworkChart />} title="My Works" scrollToId="#works" />
+                    <NavLink isActive={activeSectionIndex === 3} icon={<BiWorld />} title="Let's Connect" scrollToId="#footer" />
                 </div>
             </div>
 
             {/* Desktop */}
             <div className="action-bar-wrapper">
-                <NavLink isSelected={activeSectionIndex === 0} inactiveImageUrl={home_nav_icon_inactive} activeImageUrl={home_nav_icon_active} title="Home" scrollToId="#home" />
-                <NavLink isSelected={activeSectionIndex === 1} inactiveImageUrl={about_nav_icon_inactive} activeImageUrl={about_nav_icon_active} title="About" scrollToId="#about"/>
-                <NavLink isSelected={activeSectionIndex === 2} inactiveImageUrl={myworks_nav_icon_inactive} activeImageUrl={myworks_nav_icon_active} title="My Works" scrollToId="#works"/>
-                <NavLink isSelected={activeSectionIndex === 3} inactiveImageUrl={connect_nav_icon_inactive} activeImageUrl={connect_nav_icon_active} title="Let's Connect" scrollToId="#footer" />
+                <NavLink isActive={activeSectionIndex === 0} icon={<BiHomeAlt />} title="Home" scrollToId="#home" />
+                <NavLink isActive={activeSectionIndex === 1} icon={<AiOutlineUser />} title="About" scrollToId="#about" />
+                <NavLink isActive={activeSectionIndex === 2} icon={<BiNetworkChart />} title="My Works" scrollToId="#works" />
+                <NavLink isActive={activeSectionIndex === 3} icon={<BiWorld />} title="Let's Connect" scrollToId="#footer" />
             </div>
         </>
     )   

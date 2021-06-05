@@ -1,34 +1,39 @@
 import React from 'react'
 import './footer.css'
-import insta_icon from "../../assets/images/insta_icon.png";
-import github_icon from "../../assets/images/github_icon.png";
-import mail_icon from "../../assets/images/mail_icon.png";
-import linkedin_icon from "../../assets/images/linkedin_icon.png";
-import copyright_icon from "../../assets/images/copyright_white.png";
-
-import ProjectLabel1 from '../project_label_1/ProjectLabel1'
+import { AiFillGithub, AiOutlineInstagram, AiOutlineCopyright } from 'react-icons/ai';
+import { FiMail } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { HiChevronDoubleUp } from 'react-icons/hi';
 
 function Footer() {
+    function onScrollToTopBtnTap() {
+        window.scrollTo(0, 0)
+    }
+
     return (
-        <div id="footer" className="footer-wrapper section">
+        <div id="footer" className="footer-wrapper">
+            <div className="scroll_to_top_btn" onClick={onScrollToTopBtnTap}><HiChevronDoubleUp /></div>
+            <p className="font-white font-16">Find me on the internet</p>
             <div className="footer-deco-line"></div>
             <div className="footer_links">
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/friendcislol/">
-                    <img src={insta_icon} alt='insta_icon' />
+                    <AiOutlineInstagram />
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/francislow/">
-                    <img src={github_icon} alt='github_icon' />
+                    <AiFillGithub />
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/francis-low-bb1b4079/">
-                    <img src={linkedin_icon} alt='linkedin_icon' />
+                    <FaLinkedinIn />
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="mailto:francislow_6@hotmail.com">
-                    <img src={mail_icon} alt='linkedin_icon' />
+                    <FiMail />
                 </a>
             </div>
 
-            <ProjectLabel1 iconUrl={copyright_icon} labelTitle={'2021 Francis Low'} className="margin-top-35" />
-
+            <div className="copyright_wrapper">
+                <AiOutlineCopyright />
+                <p>{new Date().getFullYear() + ' Francis Low'}</p>
+            </div>
         </div>
     )
 }
