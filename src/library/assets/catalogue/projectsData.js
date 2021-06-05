@@ -16,7 +16,6 @@ import poofers_4 from '../images/poofers/poofers_4.png'
 import poofers_5 from '../images/poofers/poofers_5.png'
 import poofers_6 from '../images/poofers/poofers_6.png'
 import poofers_7 from '../images/poofers/poofers_7.png'
-import poofers_8 from '../images/poofers/poofers_icon.png'
 
 import unmix_1 from '../images/unmix/unmix_main.png'
 import unmix_2 from '../images/unmix/unmix_2.png'
@@ -24,7 +23,6 @@ import unmix_3 from '../images/unmix/unmix_3.png'
 import unmix_4 from '../images/unmix/unmix_4.png'
 import unmix_5 from '../images/unmix/unmix_5.png'
 import unmix_6 from '../images/unmix/unmix_6.png'
-import unmix_7 from '../images/unmix/unmix_icon.png'
 
 import emailyy_1 from '../images/emailyy/emailyy_main.png'
 import emailyy_2 from '../images/emailyy/emailyy_2.png'
@@ -68,7 +66,7 @@ const projects = {
         appstoreUrl: "",
         weburl: "",
         sourceCodeLink : "https://github.com/francislow/unmix-photo-gallery",
-        images: [unmix_1, unmix_2, unmix_3, unmix_4, unmix_5, unmix_6, unmix_7]
+        images: [unmix_1, unmix_2, unmix_3, unmix_4, unmix_5, unmix_6]
     },
     poofers: {
         name: "Poofers",
@@ -80,7 +78,7 @@ const projects = {
         appstoreUrl: "",
         weburl: "",
         sourceCodeLink : "https://github.com/francislow/poofers",
-        images: [poofers_1, poofers_2, poofers_3, poofers_4, poofers_5, poofers_6, poofers_7, poofers_8]
+        images: [poofers_1, poofers_2, poofers_3, poofers_4, poofers_5, poofers_6, poofers_7]
     }
 }
 
