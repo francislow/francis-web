@@ -35,8 +35,12 @@ const projects = {
     assemble: {
         name: "Assemble",
         type: "Cross-platform Mobile App",
-        timeline: "August 2020 - Present",
-        desc: "A local app made for Singaporeans, which allows users to form meaningful relationship through daily suggested matches.",
+        timeline: "August 2020 - January 2021",
+        descriptions: [
+            "This is a local mobile app made for Singaporeans which allows them to form meaningful relationship. It features new daily matches, chat functionality, in-app notifications and functionality to report users for inappropriate behaviours.",
+            "This project was built amidst Semester 2 of my final year in NUS as a pet project right after my internship at Webpuppies. This project was meant to be fun and also to reinforce the knowledge that I gained throughout my internship.",
+            "This server to this project has been taken down since 28 May 2021."
+        ],
         devTools: ["NativeScript Vue", "Express", "Firebase services", "AWS services", "NginX"],
         playstoreUrl: "https://play.google.com/store/apps/details?id=org.chalkboystudio.rootly",
         appstoreUrl: "https://apps.apple.com/us/app/assemble-local-dating-app/id1553270546",
@@ -48,7 +52,10 @@ const projects = {
         name: "Emailyy",
         type: "Web App",
         timeline: "Feb 2020",
-        desc: "A web app that allows user to mass send and track responses of survey emails. User logs in using Google OAuth, and pay via Stripe API. This project was built as part of a full stack web development course by Stephan Grider.",
+        descriptions: [
+            "A web app that allows user to mass send and track responses of survey emails. User logs in using Google OAuth, and pay via Stripe API.", 
+            "This project was built as part of a full stack web development course by Stephan Grider.",
+        ],
         devTools: ["ReactJS", "Redux", "MongoDB", "Express", "OAuth", "Stripe", "Heroku"],
         playstoreUrl: "",
         appstoreUrl: "",
@@ -60,7 +67,9 @@ const projects = {
         name: "Unmix",
         type: "Native Android App",
         timeline: "August 2019",
-        desc: "A native android application that allows user to store and manage pictures locally in a separate gallery.",
+        descriptions: [
+            "A native android application that allows user to store and manage pictures locally in a separate gallery."
+        ],
         devTools: ["Android", "Java", "SQLite", "Android SDK"],
         playstoreUrl: "https://play.google.com/store/apps/details?id=com.chalkboystudios.franc.unmix",
         appstoreUrl: "",
@@ -72,7 +81,10 @@ const projects = {
         name: "Poofers",
         type: "Native Android App",
         timeline: "March 2017",
-        desc: "A native android 2D arcade game application developed using libGDX, a Java game development framework.",
+        descriptions: [
+            "A native android 2D arcade game application developed using libGDX, a Java game development framework.",
+            "Fun fact: This is my first ever mobile application that I have created."
+        ],
         devTools: ["Android", "Java", "libGDX", "InkScape", "Android SDK"],
         playstoreUrl: "https://play.google.com/store/apps/details?id=com.chalkboyygames",
         appstoreUrl: "",

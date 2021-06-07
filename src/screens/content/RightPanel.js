@@ -1,14 +1,7 @@
 import React, { useEffect } from 'react'
-import {
-  useParams,
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  useLocation
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { BsCalendar } from 'react-icons/bs';
-import { IoExtensionPuzzleOutline, IoLogoGooglePlaystore } from 'react-icons/io5';
+import { IoExtensionPuzzleOutline } from 'react-icons/io5';
 
 import './rightpanel.css'
 import projects from '../../library/assets/catalogue/projectsData';
@@ -24,11 +17,17 @@ export default function RightPanel({setCurrentProjectId}) {
     setCurrentProjectId(projectId)
   }, [])
 
-  let { name, images, timeline, type, desc, devTools, playstoreUrl, appstoreUrl, weburl } = projects[projectId]
+  let { name, images, timeline, type, descriptions, devTools, playstoreUrl, appstoreUrl, weburl } = projects[projectId]
 
   let imageStyle = {
     filter: `brightness(95%)`,
   };
+
+  function renderDesc() {
+    return descriptions.map(desc => {
+      return <p className="font-14 margin-top-7">{desc}</p>
+    })
+  }
 
   function renderCarouselImages() {
     return images.map(image => {
@@ -71,7 +70,7 @@ export default function RightPanel({setCurrentProjectId}) {
       {/* Description */}
       <div class="font-14">
         <p className="font-14 bold margin-top-35">Description</p>
-        <p className="font-16 margin-top-7">{desc}</p>
+        {renderDesc()}
       </div>
 
       {/* Development Tools */}

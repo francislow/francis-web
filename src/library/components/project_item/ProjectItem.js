@@ -7,7 +7,8 @@ import { FaArrowRight } from 'react-icons/fa';
 import SkillsThumbnail from '../skills_thumbnail/SkillsThumbnail';
 
 function ProjectItem({ isImageFirst, projectId }) {
-    let {name, type, desc, devTools, images} = projects[projectId]
+    let {name, type, descriptions, devTools, images} = projects[projectId]
+    let basicDesc = descriptions[0]
 
     function renderSkills() {
         return devTools.map(devTool => {
@@ -22,7 +23,7 @@ function ProjectItem({ isImageFirst, projectId }) {
             <div style={{order: isImageFirst ? 2 : 0}} className="summary-wrapper">
                 <p className="title">{name}</p>
                 <p className="type">{type}</p>
-                <p className="desc">{desc}</p>
+                <p className="desc">{basicDesc}</p>
 
                 {/* Skills */}
                 <div className="skills_wrapper">

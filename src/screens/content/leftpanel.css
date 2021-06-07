@@ -1,7 +1,7 @@
 .left_panel_wrapper {
   background-color: var(--color-yellow);
   min-height: 100vh;
-  padding: 100px 120px 100px 30px;
+  padding: 100px 150px 100px 30px;
 }
 
 .left_panel_wrapper .title {
